@@ -88,7 +88,7 @@ ol{
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 24px;
+    
     }
 
 .backdrop-modal-close{
@@ -97,8 +97,22 @@ ol{
    background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    display: block;
-    margin-left: auto;
+    
+    position: absolute;
+    top: 24px; 
+    right: 24px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.backdrop-modal-close:hover, .backdrop-modal-close:focus {
+    background-color: #404bbf;
+    border: none;
 
 }
 
@@ -182,8 +196,7 @@ display: inline-block;
     opacity: 1;
 }
 
-.header-link:hover,
-.header-link:focus {
+.header-link:hover, .header-link:focus {
     color:#404bbf;
 }
 
