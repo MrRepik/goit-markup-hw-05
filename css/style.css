@@ -133,6 +133,18 @@ ol{
 
 /**----------------HEADER--------------**/
 
+.header-after-color{
+    color: #404bbf;
+}
+
+.portfolio-after-color{
+    color: #404bbf;
+}
+
+
+
+
+
 .header{
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -156,7 +168,7 @@ display: inline-block;
     display: block;
     position: absolute;
     background-color: #404bbf;
-    color: #404bbf;
+    
     width: 100%;
     height: 4px;
     left: 0;
@@ -210,13 +222,7 @@ display: inline-block;
 
 
 
-.header-after-color{
-    color: #404bbf;
-}
 
-.portfolio-after-color{
-    color: #404bbf;
-}
 
 
 
