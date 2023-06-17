@@ -77,7 +77,16 @@ ol{
     background: rgba(46, 47, 66, 0.4);
     top: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    
 }
+
+.is-hidden{
+    visibility: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden; 
+}
+
 
 .modal{
     position: absolute;
@@ -90,7 +99,8 @@ ol{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    padding: 72px 24px 24px;
+}
 
 .backdrop-modal-close{
     width: 24px;
@@ -107,7 +117,11 @@ ol{
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
 
+.backdrop-icon-close{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-modal-close:hover, .backdrop-modal-close:focus {
@@ -116,16 +130,132 @@ ol{
     fill: #FFFFFF;
 }
 
-.backdrop-icon-close{
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.modal-title{
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    margin-bottom: 34px;
 }
 
-.is-hidden{
-    visibility: none;
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden; 
+.modal-div{
+    margin-bottom: 8px;
 }
+
+.modal-wrap{
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.modal-icon{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill:var(--header-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.modal-label{
+    display: block;
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    margin-bottom: 4px;
+}
+
+
+.modal-input{
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+
+.input{
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--header-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input:focus, .input:focus + .modal-icon{
+    border-color: var(--link-color);
+    fill:var(--link-color);
+}
+
+
+
+
+.modal-input::placeholder{
+    font-family: 'Roboto' sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    
+}
+
+.modal-input-last{
+    display: block;
+    width: 360px;
+    height: 120px;
+    margin-bottom: 26px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 24px;
+    background: #FCFCFC;
+    
+}
+
+
+
+
+
+
+
+.modal-btn{
+    display: block;
+    margin: 0 auto ;
+    min-width: 169px;
+    height: 56px;
+    background-color: var(--link-color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+     color: #fff;
+     text-align: center;
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 
 
 
@@ -139,6 +269,16 @@ ol{
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 
 }
+
+.header-container{
+    display: flex;
+}
+
+.header-navigation{
+    display: flex;
+    align-items: center;
+}
+
 .header-logo{
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -150,6 +290,59 @@ ol{
     margin-right: 76px;
     display: inline-block;
 }
+
+.header-studio{
+    color: var(--header-studio);
+}
+
+.header-list{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.header-item{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.15;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
+    color: var(--header-color);
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.header-address{
+    margin-left: auto;
+    font-style: normal;
+}
+
+.address-flex{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.header-address-link{
+    font-family: 'Roboto' ;
+    font-size: 16px;
+    line-height: 1.50;
+    letter-spacing: 0.02em;
+    color: var(--address-color);
+    padding: 24px 0;
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 
 
 .header-after::after{
@@ -168,22 +361,7 @@ ol{
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link{
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.15;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    letter-spacing: 0.02em;
-    color: var(--header-color);
-    padding: 24px 0;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-    
-.header-link::after{
+ .header-link::after{
     content: '';
     display: block;
     position: absolute;
@@ -202,64 +380,13 @@ ol{
     opacity: 1;
 }
 
-.header-link:hover, .header-link:focus {
-    
-}
-
 .header-link:focus ,.header-link:hover{
     color: var(--hover-color);
-}
-
-.header-container{
-    display: flex;
-}
-
-.header-navigation{
-    display: flex;
-    align-items: center;
-}
-
-.header-list{
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.address-flex{
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.header-address{
-    margin-left: auto;
-    font-style: normal;
 }
 
 .header-address-link:focus ,.header-address-link:hover{
     color: var(--hover-color);
 }
-
-.header-studio{
-    color: var(--header-studio);
-}
-
-.header-item{
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-
-.header-address-link{
-font-family: 'Roboto' ;
-font-size: 16px;
-line-height: 1.50;
-letter-spacing: 0.02em;
-color: var(--address-color);
-padding: 24px 0;
-display: block;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 
 
 .header-after-color{
